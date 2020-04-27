@@ -8,6 +8,13 @@
 
 <script>
 export default {
-  name: "app"
+  name: "app",
+  mounted() {
+    // eslint-disable-next-line no-unused-vars
+    window.onbeforeunload = function(e) {
+      const storage = window.localStorage;
+      storage.clear();
+    };
+  }
 };
 </script>

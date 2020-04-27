@@ -11,7 +11,8 @@
       <div class="topbar-info">
         <a @click="jump2">关于</a>
         <a @click="jump">登录</a>
-        <a @click="jump">注册</a>
+        <a @click="jump3">注册</a>
+        <!--<a @click="clear">注销</a>-->
       </div>
       <div class="topbar-cart" @mouseenter="cartEnter" @mouseleave="cartOut">
         <div class="cart" :class="{ active: cartStatus }">
@@ -62,6 +63,9 @@ export default {
     },
     jump2() {
       this.$router.push("/About");
+    },
+    jump3() {
+      this.$router.push("/Register");
     }
   },
   components: {}
